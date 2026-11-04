@@ -1,0 +1,17 @@
+# Eclipse
+.metadata/
+*.launch
+
+# Arquivos compilados Java
+*.class
+bin/
+
+# Maven
+target/
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
