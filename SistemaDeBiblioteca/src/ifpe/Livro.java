@@ -10,12 +10,29 @@ public class Livro {
 		this.titulo = titulo;
 		this.autor = autor;
 	}
+	
+	public int getNumeroId() {
+		return numeroId;
+	}
+
+	public void setNumeroId(int numeroId) {
+		this.numeroId = numeroId;
+	}
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+	public void setAutor(Autor autor) {
+		this.autor = autor;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
 	public String getTitulo() {
 		return titulo;
 	}
-	public void exibirDados() {
-		System.out.println("ID do livro: " + numeroId + " | Título: " + titulo);
-		System.out.println("-- Autor:");
-		autor.exibirDados();
-	}
+	
 }

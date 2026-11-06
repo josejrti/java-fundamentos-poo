@@ -1,26 +1,37 @@
 package ifpe;
 import java.util.ArrayList;
 
-public class Leitor {
-	private String nome;
+public class Leitor extends Pessoa{
 	private String cpf;
-	private ArrayList<Emprestimo> listaEmprestimos;
+	private ArrayList<Emprestimo> listaEmprestimos = new ArrayList<>();
 	
 	public Leitor(String nome, String cpf) {
-		this.nome = nome;
+		super(nome);
 		this.cpf = cpf;
-		this.listaEmprestimos = new ArrayList<>();
 	}
 	
-	public String getNome() {
-		return nome;
+	public Leitor() {};
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public ArrayList<Emprestimo> getListaEmprestimos() {
+		return listaEmprestimos;
+	}
+
+	public void setListaEmprestimos(ArrayList<Emprestimo> listaEmprestimos) {
+		this.listaEmprestimos = listaEmprestimos;
+	}
+
+	// Método de teste
+	@Override
+	public void falar() {
+		System.out.println("Teste");
 	}
 	
-	public void adicionarEmprestimo(Emprestimo emprestimo) {
-		this.listaEmprestimos.add(emprestimo);
-	}
-	
-	public void exibirDados() {
-		System.out.println("Nome: " + nome + " | CPF: " + cpf);
-	}
 }

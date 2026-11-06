@@ -3,48 +3,46 @@ import java.util.ArrayList;
 
 public class Biblioteca {
 	private String nome;
-	private ArrayList<Livro> listaLivros;
-	private ArrayList<Leitor> listaLeitores;
-	private ArrayList<Emprestimo> listaEmprestimos;
+	private ArrayList<Livro> listaLivros = new ArrayList<>();
+	private ArrayList<Leitor> listaLeitores = new ArrayList<>();
+	private ArrayList<Emprestimo> listaEmprestimos = new ArrayList<>();
 	
 	public Biblioteca(String nome) {
 		this.nome = nome;
-		this.listaLivros = new ArrayList<>();
-		this.listaLeitores = new ArrayList<>();
-		this.listaEmprestimos = new ArrayList<>();
+	}
+	
+	public Biblioteca() {}
+
+	public String getNome() {
+		return nome;
 	}
 
-	public void adicionarLivro(Livro livro) {
-		this.listaLivros.add(livro);
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
+
+	public ArrayList<Livro> getListaLivros() {
+		return listaLivros;
+	}
+
+	public void setListaLivros(ArrayList<Livro> listaLivros) {
+		this.listaLivros = listaLivros;
+	}
+
+	public ArrayList<Leitor> getListaLeitores() {
+		return listaLeitores;
+	}
+
+	public void setListaLeitores(ArrayList<Leitor> listaLeitores) {
+		this.listaLeitores = listaLeitores;
+	}
+
+	public ArrayList<Emprestimo> getListaEmprestimos() {
+		return listaEmprestimos;
+	}
+
+	public void setListaEmprestimos(ArrayList<Emprestimo> listaEmprestimos) {
+		this.listaEmprestimos = listaEmprestimos;
+	};
 	
-	public void adicionarLeitor(Leitor leitor) {
-		this.listaLeitores.add(leitor);
-	}
-	
-	public void adicionarEmprestimo(Emprestimo emprestimo) {
-		this.listaEmprestimos.add(emprestimo);
-	}
-	
-	public void exibirDados() {
-		System.out.println("===== Biblioteca: " + nome + " =====\n");
-		System.out.println("Lista de livros:\n");
-		for(Livro livro : listaLivros) {
-			System.out.println("---------------------------------------------");
-			livro.exibirDados();
-			System.out.println("---------------------------------------------");
-		}
-		System.out.println("\nLista de Leitores:\n");
-		for(Leitor leitor : listaLeitores) {
-			System.out.println("---------------------------------------------");
-			leitor.exibirDados();
-			System.out.println("---------------------------------------------");
-		}
-		System.out.println("\nLista de Empréstimos:\n");
-		for(Emprestimo emprestimo : listaEmprestimos) {
-			System.out.println("---------------------------------------------");
-			emprestimo.exibirDados();
-			System.out.println("---------------------------------------------");
-		}
-	}
 }

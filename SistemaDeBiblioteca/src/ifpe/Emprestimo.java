@@ -12,9 +12,37 @@ public class Emprestimo {
 		this.leitor = leitor;
 		this.data = data;
 	}
-	
-	public void exibirDados() {
-		System.out.println("ID do empréstimo: " + numeroId + " | Livro: " + livro.getTitulo());
-		System.out.println("Leitor: " + leitor.getNome() + " | Data: " + data);
+
+	public int getNumeroId() {
+		return numeroId;
 	}
+
+	public void setNumeroId(int numeroId) {
+		this.numeroId = numeroId;
+	}
+
+	public Livro getLivro() {
+		return livro;
+	}
+
+	public void setLivro(Livro livro) {
+		this.livro = livro;
+	}
+
+	public Leitor getLeitor() {
+		return leitor;
+	}
+
+	public void setLeitor(Leitor leitor) {
+		this.leitor = leitor;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
 }
