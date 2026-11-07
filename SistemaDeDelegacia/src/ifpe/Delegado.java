@@ -1,26 +1,37 @@
 package ifpe;
+
 import java.util.ArrayList;
 
-public class Delegado {
-	private String nome;
+public class Delegado extends Pessoa{
 	private String matricula;
-	private ArrayList<Crime> listaCrimes;
+	private ArrayList<Crime> listaCrimesSobResponsabilidade = new ArrayList<>();
 	
-	public Delegado(String nome, String matricula) {
-		this.nome = nome;
+	public Delegado(String nome, String cpf, String matricula) {
+		super(nome, cpf);
 		this.matricula = matricula;
-		this.listaCrimes = new ArrayList<>();
 	}
 	
-	public String getNome() {
-		return nome;
+	public Delegado() {}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 	
-	public void addCrime(Crime crime) {
-		this.listaCrimes.add(crime);
+	public ArrayList<Crime> getListaCrimesSobResponsabilidade() {
+		return listaCrimesSobResponsabilidade;
 	}
+
+	public void setListaCrimesSobResponsabilidade(ArrayList<Crime> listaCrimesSobResponsabilidade) {
+		this.listaCrimesSobResponsabilidade = listaCrimesSobResponsabilidade;
+	}
+
+	@Override
+	public void teste() {
+		System.out.println("Teste");
+	};
 	
-	public void exibirDados() {
-		System.out.println("Nome: " + nome + " - Matrícula: " + matricula);
-	}
 }

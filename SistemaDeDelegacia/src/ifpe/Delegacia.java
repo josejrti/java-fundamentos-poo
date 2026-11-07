@@ -4,34 +4,47 @@ import java.util.ArrayList;
 public class Delegacia {
 	private String nome;
 	private String endereco;
-	private ArrayList<Delegado> listaDelegados;
-	private ArrayList<Crime> listaCrimes;
+	private Delegado delegado;
+	private ArrayList<Crime> listaCrimes = new ArrayList<>();
 	
-	public Delegacia(String nome, String endereco) {
+	public Delegacia(String nome, String endereco, Delegado delegado) {
 		this.nome = nome;
+		this.delegado = delegado;
 		this.endereco = endereco;
-		this.listaDelegados = new ArrayList<>();
-		this.listaCrimes = new ArrayList<>();
 	}
 
-	public void addDelegado(Delegado delegado) {
-		this.listaDelegados.add(delegado);
+	public Delegacia() {}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public Delegado getDelegado() {
+		return delegado;
+	}
+
+	public void setDelegado(Delegado delegado) {
+		this.delegado = delegado;
+	}
+
+	public ArrayList<Crime> getListaCrimes() {
+		return listaCrimes;
+	}
+
+	public void setListaCrimes(ArrayList<Crime> listaCrimes) {
+		this.listaCrimes = listaCrimes;
 	}
 	
-	public void addCrime(Crime crime) {
-		this.listaCrimes.add(crime);
-	}
-	
-	public void exibirDados() {
-		System.out.println("----- Delegacia: " + nome + " -----");
-		System.out.println("\nEndereço: " + endereco);
-		System.out.println("\nLista de delegados:\n");
-		for (Delegado delegado : listaDelegados) {
-			delegado.exibirDados();
-		}
-		System.out.println("\nLista de crimes:\n");
-		for (Crime crime : listaCrimes) {
-			crime.exibirDados();
-		}
-	}
 }
